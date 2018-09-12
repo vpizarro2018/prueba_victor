@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listapruebas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Desde</th>
+      <th>Hasta</th>
+      <th>Responsable</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listapruebas.each do |listaprueba| %>
+      <tr>
+        <td><%= listaprueba.nombre %></td>
+        <td><%= listaprueba.desde %></td>
+        <td><%= listaprueba.hasta %></td>
+        <td><%= listaprueba.responsable %></td>
+        <td><%= listaprueba.estado %></td>
+        <td><%= link_to 'Show', listaprueba %></td>
+        <td><%= link_to 'Edit', edit_listaprueba_path(listaprueba) %></td>
+        <td><%= link_to 'Destroy', listaprueba, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Listaprueba', new_listaprueba_path %>

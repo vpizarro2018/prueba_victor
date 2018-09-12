@@ -1,0 +1,2 @@
+class Listaprueba < ApplicationRecord
+end

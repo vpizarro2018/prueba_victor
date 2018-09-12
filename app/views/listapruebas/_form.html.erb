@@ -1,0 +1,42 @@
+<%= form_with(model: listaprueba, local: true) do |form| %>
+  <% if listaprueba.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(listaprueba.errors.count, "error") %> prohibited this listaprueba from being saved:</h2>
+
+      <ul>
+      <% listaprueba.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desde %>
+    <%= form.date_select :desde %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hasta %>
+    <%= form.date_select :hasta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :responsable %>
+    <%= form.text_field :responsable %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado %>
+    <%= form.check_box :estado %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

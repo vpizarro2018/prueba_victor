@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @listaprueba.nombre %>
+</p>
+
+<p>
+  <strong>Desde:</strong>
+  <%= @listaprueba.desde %>
+</p>
+
+<p>
+  <strong>Hasta:</strong>
+  <%= @listaprueba.hasta %>
+</p>
+
+<p>
+  <strong>Responsable:</strong>
+  <%= @listaprueba.responsable %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @listaprueba.estado %>
+</p>
+
+<%= link_to 'Edit', edit_listaprueba_path(@listaprueba) %> |
+<%= link_to 'Back', listapruebas_path %>
